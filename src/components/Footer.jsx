@@ -235,8 +235,8 @@ function reducer(state, action) {
       };
     }
 
-    default : {
-      return  state
+    default: {
+      return state;
     }
   }
 }
@@ -250,34 +250,88 @@ function Footer() {
     });
   }
 
-  const {show} = state;
+  const { show } = state;
   return (
     <>
-      <Box position={"relative"} >
+      <Box position={"relative"}>
         <Center
-        //   border="2px solid black"
-          w="50%"
+          //   border="2px solid black"
+          w={{
+            base: "80%",
+            sm: "70%",
+            md: "70%",
+            lg: "60%",
+            xl: "60%",
+            "2xl": "60%",
+          }}
+          // h={{
+          //   base : "50px",
+          //   sm : "70px"
+          // }}
           m="auto"
           position={"absolute"}
           zIndex={10}
           top={"24%"}
-          left={"20%"}
-          
-          
+          left={{
+            base: "10%",
+            sm: "15%",
+            md: "15%",
+            lg: "20%",
+            xl: "20%",
+          }}
         >
-          <SimpleGrid opacity={1} borderRadius="16px" bg="#333697" columns={2} spacing={10}>
-            <Box fontSize="16px" color={"#FFFFFF"}  height="150px" p={4}>
+          <SimpleGrid
+            opacity={1}
+            borderRadius="16px"
+            bg="#333697"
+            columns={{
+              base: "1",
+              sm: "1",
+              md: "2",
+              lg: "2",
+              xl: "2",
+              "2xl": "2",
+            }}
+            spacing={{
+              base: "0",
+              sm: "0",
+              md: "2",
+              lg: "4",
+              xl: "4",
+              "2xl": "4",
+            }}
+          >
+            <Box fontSize="16px" color={"#FFFFFF"} height="150px" p={4}>
               <Heading fontSize={28}>Contact Us!</Heading>
-              <p  >
+              <p>
                 There are many variations of passages of Lorem Ipsum but the
                 majority have suffered alteration.
               </p>
             </Box>
             <Box height="150px" p={4}>
-              <InputGroup mt="10%"  size="md">
-                <Input bg={"#FFFFFF"} borderRadius={20} pr="4.5rem" type="text" placeholder="Email Here" />
+              <InputGroup mt="10%" size="md">
+                <Input
+                  bg={"#FFFFFF"}
+                  borderRadius={20}
+                  pr="4.5rem"
+                  type="text"
+                  placeholder="Email Here"
+                />
                 <InputRightElement width="4.5rem">
-                  <Button  bg="#FFEC05" h="1.75rem" borderRadius={20} mr="8%" size="lg"  fontSize="12px" onClick={handleClick}>
+                  <Button
+                    _hover={{
+                      textDecorationColor: "#FFEC05",
+                      transition: "transform 0.4s ease-in-out",
+                      transform: "scale(1.1)",
+                    }}
+                    bg="#FFEC05"
+                    h="1.75rem"
+                    borderRadius={20}
+                    mr="8%"
+                    size="lg"
+                    fontSize="12px"
+                    onClick={handleClick}
+                  >
                     {show ? "Sent" : "Send"}
                   </Button>
                 </InputRightElement>
@@ -289,8 +343,46 @@ function Footer() {
       <br />
 
       <br />
-      <Box bg="#EBEBF8" mt="5%">
-        <SimpleGrid p={16} columns={4} spacing={10}>
+      <Box
+        bg="#EBEBF8"
+        mt={{
+          base: "52%",
+          sm: "35%",
+          md: "4%",
+          lg: "4%",
+          xl: "4%",
+          "2xl": "4%",
+        }}
+      >
+        <SimpleGrid
+          p={16}
+          columns={{
+            base: "1",
+            sm: "1",
+            md: "2",
+            lg: "4",
+            xl: "4",
+            "2xl": "4",
+          }}
+          spacing={10}
+          w={{
+            base: "100%",
+            sm: "100%",
+            md: "100%",
+            lg: "100%",
+            xl: "100%",
+            "2xl": "100%",
+          }}
+          justifyContent={"space-around"}
+          m={{
+            base: "auto",
+            sm: "auto",
+            md: "auto",
+            lg: "auto",
+            xl: "auto",
+            "2xl": "auto",
+          }}
+        >
           <Box>
             <List spacing={2}>
               <ListItem display={"flex"} alignItems={"center"}>
@@ -311,17 +403,58 @@ function Footer() {
               </ListItem>
             </List>
             <br />
-            <Wrap ml="6%">
-              <WrapItem>
+            <Wrap
+              ml={{
+                base: "6%",
+                sm: "4%",
+                md: "5%",
+                lg: "6%",
+                xl: "5%",
+                "2xl": "5%",
+              }}
+            >
+              <WrapItem
+                _hover={{
+                  textDecoration: "underline",
+                  textDecorationThickness: "14%",
+                  textDecorationColor: "#FFEC05",
+                  transition: "transform 0.4s ease-in-out",
+                  transform: "scale(1.1)",
+                }}
+              >
                 <Avatar as={fbIcon} />
               </WrapItem>
-              <WrapItem>
+              <WrapItem
+                _hover={{
+                  textDecoration: "underline",
+                  textDecorationThickness: "14%",
+                  textDecorationColor: "#FFEC05",
+                  transition: "transform 0.4s ease-in-out",
+                  transform: "scale(1.1)",
+                }}
+              >
                 <Avatar as={twitterIcon} />
               </WrapItem>
-              <WrapItem>
+              <WrapItem
+                _hover={{
+                  textDecoration: "underline",
+                  textDecorationThickness: "14%",
+                  textDecorationColor: "#FFEC05",
+                  transition: "transform 0.4s ease-in-out",
+                  transform: "scale(1.1)",
+                }}
+              >
                 <Avatar as={linkedinIcon} />
               </WrapItem>
-              <WrapItem>
+              <WrapItem
+                _hover={{
+                  textDecoration: "underline",
+                  textDecorationThickness: "14%",
+                  textDecorationColor: "#FFEC05",
+                  transition: "transform 0.4s ease-in-out",
+                  transform: "scale(1.1)",
+                }}
+              >
                 <Avatar as={pinInterest} />
               </WrapItem>
             </Wrap>
@@ -329,50 +462,181 @@ function Footer() {
           <Box display={"grid"} gap={"4%"} mt="10%">
             <Text fontWeight={"bold"}>Links</Text>
             <br />
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               Home
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               Pricing
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               Download
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               About
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               Service
             </Link>
           </Box>
           <Box display={"grid"} gap={"4%"} mt="10%">
             <Text fontWeight={"bold"}>Support</Text>
             <br />
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               FAQ
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               How it
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               Features
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               Contact
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               Reporting
             </Link>
           </Box>
           <Box display={"grid"} gap={"4%"} mt="10%">
             <Text fontWeight={"bold"}>Contact Us</Text>
-            <Link fontWeight={"650"} color="#707070" mt="10%">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              mt="10%"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               +880 12345678
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               youremail@gmail.com
             </Link>
-            <Link fontWeight={"650"} color="#707070">
+            <Link
+              fontWeight={"650"}
+              color="#707070"
+              _hover={{
+                textDecoration: "underline",
+                textDecorationThickness: "14%",
+                textDecorationColor: "#FFEC05",
+                transition: "transform 0.4s ease-in-out",
+                transform: "scale(1.1)",
+              }}
+            >
               Pune City
             </Link>
           </Box>
