@@ -1,19 +1,40 @@
-#root{
-    position: relative;
-    background-image: url('../src//assets/woman-in-blue-crew-neck-shirt-using-black-laptop-computer-3994051.png');
-    background-repeat: no-repeat;
-    background-size: 80rem;
-   
-
+#root {
+  position: relative;
+  background-image: url("../src//assets/woman-in-blue-crew-neck-shirt-using-black-laptop-computer-3994051.png");
+  background-repeat: no-repeat;
+  background-size: 80rem;
 }
 
-
-
-#root{
-    background-color: #F9F9FF;
+#root {
+  background-color: #f9f9ff;
 }
 
+* {
+  font: normal normal medium 55px/83px Poppins;
+}
 
-*{
-    font: normal normal medium 55px/83px Poppins;
+input[type="text"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type="submit"] {
+  background-color: #04aa6d;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #45a049;
 }

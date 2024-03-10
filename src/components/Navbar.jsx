@@ -139,6 +139,7 @@ function Navbar() {
               <ListIcon as={CustomLogo} color="green.500" />
               &nbsp;&nbsp;
               <Link
+              href="/"
                 ml={{
                   base: "10%",
                   sm: "1%",
@@ -230,7 +231,7 @@ function Navbar() {
             Our Goals
           </Link>
           <Link
-            href="/contact-us"
+            href="/contact"
             backgroundColor={"#FFEC05"}
             p={2}
             borderRadius={"30px"}
