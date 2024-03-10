@@ -270,7 +270,7 @@ function Footer() {
           // }}
           m="auto"
           position={"absolute"}
-          zIndex={10}
+          zIndex={1}
           top={"24%"}
           left={{
             base: "10%",

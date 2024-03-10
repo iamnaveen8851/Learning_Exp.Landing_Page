@@ -91,7 +91,7 @@ function Navbar() {
         }}
         position={"sticky"}
         top={"0%"}
-        //    zIndex={10}
+           zIndex={10}
         className="nav-container"
         border={"1px solid black"}
         justify={"space-around"}
@@ -117,23 +117,7 @@ function Navbar() {
           }}
          
         >
-          {/* <List spacing={2}>
-            <ListItem display={"flex"} alignItems={"center"}>
-              <ListIcon as={CustomLogo} color="green.500" />
-              <Link
-                color="#FFFFFF"
-                _hover={{
-                  transition: "transform 0.1s ease-in-out",
-                  transform: "scale(1.1)",
-                }}
-                fontSize={"24px"}
-                fontWeight={"600"}
-              >
-                {" "}
-                Learning Exp.
-              </Link>
-            </ListItem>
-          </List> */}
+       
           <List spacing={2}>
             <ListItem display={"flex"} alignItems={"center"} >
               <ListIcon as={CustomLogo} color="green.500" />
