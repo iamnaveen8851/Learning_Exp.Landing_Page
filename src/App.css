@@ -2,3 +2,12 @@
     background-image: url('../src//assets/woman-in-blue-crew-neck-shirt-using-black-laptop-computer-3994051.png');
 }
 
+
+#root{
+    background-color: #F9F9FF;
+}
+
+
+*{
+    font: normal normal medium 55px/83px Poppins;
+}

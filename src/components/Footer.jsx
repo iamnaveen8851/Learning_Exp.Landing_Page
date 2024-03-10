@@ -253,7 +253,7 @@ function Footer() {
   const { show } = state;
   return (
     <>
-      <Box position={"relative"}>
+      <Box mt="5%" position={"relative"}>
         <Center
           //   border="2px solid black"
           w={{
