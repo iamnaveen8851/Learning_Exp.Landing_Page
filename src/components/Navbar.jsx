@@ -17,6 +17,8 @@ import {
 } from "@chakra-ui/react";
 
 import { HamburgerIcon } from "@chakra-ui/icons";
+
+import { useState, useEffect } from "react";
 const CustomLogo = () => {
   return (
     <div
@@ -77,7 +79,24 @@ const CustomLogo = () => {
 };
 
 function Navbar() {
+  const [scrolling, setScrolling] = useState(false);
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 0) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
       <Flex
@@ -91,9 +110,8 @@ function Navbar() {
         }}
         position={"sticky"}
         top={"0%"}
-           zIndex={10}
-        className="nav-container"
-        border={"1px solid black"}
+        zIndex={10}
+        className={`nav-container ${scrolling ? "scrolled" : ""}`}
         justify={"space-around"}
         alignItems={"center"}
       >
@@ -115,22 +133,21 @@ function Navbar() {
             xl: "30%", // ~1280px
             "2xl": "30%",
           }}
-         
         >
-       
           <List spacing={2}>
-            <ListItem display={"flex"} alignItems={"center"} >
+            <ListItem display={"flex"} alignItems={"center"}>
               <ListIcon as={CustomLogo} color="green.500" />
               &nbsp;&nbsp;
-              <Link ml={{
-                base : "10%",
-                sm :"1%",
-                md : "1%",
-                lg:"5%",
-                xl : "5%",
-                "2xl" : "5%"
-              }}
-                color="black"
+              <Link
+                ml={{
+                  base: "10%",
+                  sm: "1%",
+                  md: "1%",
+                  lg: "5%",
+                  xl: "5%",
+                  "2xl": "5%",
+                }}
+                color={scrolling ? "#YOUR_SCROLLED_COLOR" : "#FFFFFF"}
                 _hover={{
                   transition: "transform 0.1s ease-in-out",
                   transform: "scale(1.1)",
@@ -159,7 +176,8 @@ function Navbar() {
           justifyContent={"center"}
           alignItems={"center"}
           gap="5%"
-          color={"#FFFFFF"}
+          color={scrolling ? "black" : "#FFFFFF"}
+          // color={"#FFFFFF"}
           // border={"1px solid red"}
           fontWeight={"500"}
         >
@@ -240,8 +258,7 @@ function Navbar() {
             base: "14%",
             sm: "12%",
             md: "7%",
-            lg :"0%"
-
+            lg: "0%",
           }}
           h="55px"
           p={2}

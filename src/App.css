@@ -1,6 +1,12 @@
-.nav-container{
+#root{
+    position: relative;
     background-image: url('../src//assets/woman-in-blue-crew-neck-shirt-using-black-laptop-computer-3994051.png');
+    background-repeat: no-repeat;
+    background-size: 80rem;
+   
+
 }
+
 
 
 #root{

@@ -5,7 +5,6 @@ import {
   CardBody,
   Icon,
   Text,
-  CardFooter,
   Box,
   Link,
   Heading,
@@ -124,8 +123,7 @@ const UserCircle = () => {
   );
 };
 
-
-// Cards Icon Svg 
+// Cards Icon Svg
 const flexibleLearningIcon = () => {
   return (
     <svg
@@ -1434,17 +1432,141 @@ function Home() {
 
   return (
     <>
+      <SimpleGrid
+        w="90%"
+        // border={"1px solid black"}
+        p={10}
+        m="auto"
+        columns={{
+          base: "1",
+          sm: "1",
+          md: "2",
+          lg: "2",
+          xl: "2",
+          "2xl": "2",
+        }}
+        spacing={10}
+      >
+        <Box h="300px">
+          <Heading textAlign={"center"} fontSize={32}>
+            We Create Learning Experience With Excellent Technology.
+          </Heading>
+          <br />
+          <Text>
+            {" "}
+            Unlimited Access To 100+ World-Class Courses, Hands-On Projects, And
+            Job-Ready Certificate Programs— All Included In Your Subscription
+          </Text>
+          <br />
+          <Button
+            href="/contact-us"
+            backgroundColor={"#FFEC05"}
+            h="48px"
+            w={{
+              base: "30%",
+              sm: "30%",
+              md: "30%",
+              lg: "30%",
+              xl: "30%",
+              "2xl": "30%",
+            }}
+            fontSize={{
+              base: "12px",
+              sm: "13px",
+              md: "14px",
+              lg: "16px",
+              xl: "16px",
+              "2xl": "16px",
+            }}
+            fontWeight={600}
+            borderRadius={"30px"}
+            color={"black"}
+            _hover={{
+              textDecoration: "underline",
+              textDecorationThickness: "14%",
+              textDecorationColor: "black",
+              transition: "transform 0.1s ease-in-out",
+              transform: "scale(1.1)",
+            }}
+          >
+            Book Demo Class
+          </Button>
+          <Button
+            href="/contact-us"
+            backgroundColor={"transparent"}
+            h="48px"
+            w={{
+              base: "30%",
+              sm: "30%",
+              md: "30%",
+              lg: "30%",
+              xl: "30%",
+              "2xl": "30%",
+            }}
+            fontSize={{
+              base: "10px",
+              sm: "13px",
+              md: "14px",
+              lg: "16px",
+              xl: "16px",
+              "2xl": "16px",
+            }}
+            // w="23%"
+            // fontSize={"16px"}
+            fontWeight={600}
+            borderRadius={"30px"}
+            color={"white"}
+            _hover={{
+              textDecoration: "underline",
+              textDecorationThickness: "14%",
+              textDecorationColor: "black",
+              transition: "transform 0.1s ease-in-out",
+              transform: "scale(1.1)",
+            }}
+          >
+            Expore More
+          </Button>
+        </Box>
+        <Box
+          h="300px"
+          borderRadius={"20px"}
+          border="10px solid #E9D8FD"
+          position={"relative"}
+          overflow={"hidden"}
+        >
+          <Iframe
+            url="http://www.youtube.com/embed/xDMP3i36naA?controls=0"
+            position="absolute"
+            width="100%"
+            id="myId"
+            className="myClassname"
+            height="100%"
+            styles={{ height: "320px" }}
+          />
+        </Box>
+      </SimpleGrid>
+
+      {/* Card Section */}
       <Center
         w="90%"
         p={5}
         m={"auto"}
-        border={"2px solid red"}
+        // border={"2px solid red"}
         display={"grid"}
         justifyContent={"space-around"}
         alignItems={"center"}
         gap={"10%"}
+        mt="25%"
       >
-        <Box border={"1px solid black"} w="50%" m="auto">
+        <Box
+          w={{
+            base: "80%",
+            sm: "70%",
+            md: "60%",
+            lg: "50%",
+          }}
+          m="auto"
+        >
           <Heading textAlign={"center"}>
             We provide various kind of learning modules for you
           </Heading>
@@ -1474,10 +1596,27 @@ function Home() {
       <br />
       <br />
       <br />
-      <SimpleGrid columns={3} w="70%" h="300px" m="auto" spacing={10}>
+      <SimpleGrid
+        columns={{
+          base: "1",
+          sm: "1",
+          md: "2",
+          lg: "3",
+          xl: "3",
+          "2xl": "3",
+        }}
+        w="65%"
+        h="300px"
+        m="auto"
+        spacing={10}
+      >
         <Box
-          border={"1px solid black"}
-          // bg="tomato"
+          // border={"1px solid black"}
+          _hover={{
+            backgroundColor: "#FEFCBF",
+            transition: "transform 0.1s ease-in-out",
+            transform: "scale(1.1)",
+          }}
         >
           <Center
             // border={"1px solid black"}
@@ -1492,14 +1631,14 @@ function Home() {
             mt="10%"
             color={"#000000"}
             textAlign={"center"}
-            fontSize={30}
+            fontSize={25}
           >
             Learn Anything
           </Heading>
           <Text
             mt="4%"
             textAlign={"center"}
-            fontSize={15}
+            fontSize={14}
             fontWeight={600}
             color={"#6B6969"}
           >
@@ -1508,8 +1647,12 @@ function Home() {
           </Text>
         </Box>
         <Box
-          border={"1px solid black"}
-          // bg="tomato"
+          // border={"1px solid black"}
+          _hover={{
+            backgroundColor: "#FEFCBF",
+            transition: "transform 0.1s ease-in-out",
+            transform: "scale(1.1)",
+          }}
         >
           <Center
             // border={"1px solid black"}
@@ -1524,14 +1667,14 @@ function Home() {
             mt="10%"
             color={"#000000"}
             textAlign={"center"}
-            fontSize={30}
+            fontSize={25}
           >
             Flexible Learning
           </Heading>
           <Text
             mt="4%"
             textAlign={"center"}
-            fontSize={15}
+            fontSize={14}
             fontWeight={600}
             color={"#6B6969"}
           >
@@ -1540,8 +1683,12 @@ function Home() {
           </Text>
         </Box>
         <Box
-          border={"1px solid black"}
-          // bg="tomato"
+          // border={"1px solid black"}
+          _hover={{
+            backgroundColor: "#FEFCBF",
+            transition: "transform 0.1s ease-in-out",
+            transform: "scale(1.1)",
+          }}
         >
           <Center
             // border={"1px solid black"}
@@ -1556,14 +1703,14 @@ function Home() {
             mt="10%"
             color={"#000000"}
             textAlign={"center"}
-            fontSize={30}
+            fontSize={25}
           >
             Expert Connect
           </Heading>
           <Text
             mt="4%"
             textAlign={"center"}
-            fontSize={15}
+            fontSize={14}
             fontWeight={600}
             color={"#6B6969"}
           >
@@ -1578,15 +1725,23 @@ function Home() {
       {/* Video  */}
       <Center
         w="90%"
-        p={5}
+        p={10}
         m={"auto"}
-        border={"2px solid red"}
+        // border={"2px solid red"}
         display={"grid"}
         justifyContent={"space-around"}
         alignItems={"center"}
         gap={"10%"}
+        mt={{
+          base: "90%",
+          sm: "99%",
+          md: "35%",
+          lg: "5%",
+          xl: "4%",
+          "2xl": "1%",
+        }}
       >
-        <Box border={"1px solid black"} w="70%" m="auto">
+        <Box w="70%" m="auto">
           <Heading textAlign={"center"}>Why Us</Heading>
         </Box>
 
@@ -1604,12 +1759,25 @@ function Home() {
         </Box>
       </Center>
       <br />
-      <SimpleGrid w="90%" m="auto" columns={2} spacing={10}>
+      <br />
+      <SimpleGrid
+        w="90%"
+        m="auto"
+        columns={{
+          base: "1",
+          sm: "1",
+          md: "2",
+          lg: "2",
+          xl: "2",
+          "2xl": "2",
+        }}
+        spacing={10}
+      >
         <Box
           borderRadius={"20px"}
-          border="10px solid #E9D8FD"
+          // border="10px solid #E9D8FD"
           position={"relative"}
-          overflow={"hidden"}
+          // overflow={"hidden"}
         >
           <Iframe
             url="http://www.youtube.com/embed/xDMP3i36naA?controls=0"
@@ -1620,24 +1788,19 @@ function Home() {
             height="100%"
             styles={{ height: "320px" }}
           />
-
-          {/* for video icon */}
-          {/* {!isplay && <img
-           src={next}
-            alt="next"
-            style={{
-                position : "absolute",
-                top : "50%",
-                left : "50%",
-                transform : 'translate(-50%, -50%)',
-                cursor: 'pointer',
-            }}
-            onClick={handlePlayPause}
-          
-          />} */}
         </Box>
 
-        <Box h="auto">
+        <Box
+          h="auto"
+          mt={{
+            base: "90%",
+            sm: "60%",
+            md: "1%",
+            lg: "2%",
+            xl: "2%",
+            "2xl": "2%",
+          }}
+        >
           <Heading textAlign={"center"} fontSize={32}>
             Crafting Your Dream Career: Building a Path You Love with us
           </Heading>
@@ -1676,17 +1839,19 @@ function Home() {
         </Box>
       </SimpleGrid>
       <br />
+      <br />
+      <br />
       <Center
         w="90%"
         p={5}
         m={"auto"}
-        border={"2px solid red"}
+        // border={"2px solid red"}
         display={"grid"}
         justifyContent={"space-around"}
         alignItems={"center"}
         gap={"10%"}
       >
-        <Box border={"1px solid black"} w="70%" m="auto">
+        <Box w="70%" m="auto">
           <Heading textAlign={"center"}>
             We Completed 1200+ Certification Program Successfully & Counting
           </Heading>
@@ -1705,10 +1870,46 @@ function Home() {
           </Text>
         </Box>
       </Center>
-      <Flex border={"2px solid black"} w="90%" m="auto" mt="2%">
+      <br />
+
+      {/* Icons  */}
+      <Flex
+        // border={"2px solid black"}
+        w={{
+          base: "90%",
+          sm: "100%",
+          md: "90%",
+          lg: "90%",
+          xl: "90%",
+          "2xl": "30%",
+        }}
+        fontSize={{
+          base: "10px",
+          sm: "13px",
+          md: "14px",
+          lg: "16px",
+          xl: "16px",
+          "2xl": "16px",
+        }}
+        m="auto"
+        mt="10%"
+      >
         <List
-          w="75%"
+          w={{
+            base: "90%",
+            sm: "90%",
+            md: "90%",
+            lg: "90%",
+          }}
           display="flex"
+          flexDirection={{
+            base: "column",
+            sm: "column",
+            md: "row",
+            lg: "row",
+            xl: "row",
+            "2xl": "row",
+          }}
           justifyContent={"space-around"}
           alignItems={"center"}
           m="auto"
@@ -1752,9 +1953,17 @@ function Home() {
         mt="5%"
         justifyContent={"space-between"}
         alignItems={"center"}
-        border={"1px solid black"}
+        // border={"1px solid black"}
+        flexDirection={{
+          base: "column",
+          sm: "column",
+          md: "column",
+          lg: "row",
+          xl: "row",
+          "2xl": "row",
+        }}
       >
-        <Box w="70%">
+        <Box w="70%" p={2}>
           <Heading fontSize={35}>Our Students Feedback</Heading>
           <p style={{ color: "#707070", fontSize: "16px" }}>
             At Learning Exp. We Are Committed To Providing You With A Superior
@@ -1779,7 +1988,7 @@ function Home() {
         overflow="hidden"
         variant="outline"
         w="90%"
-        border={"1px solid black"}
+        // border={"1px solid black"}
         m="auto"
         bg="#EBEBF8"
       >
@@ -1795,7 +2004,7 @@ function Home() {
             <Box
               display={"flex"}
               gap={4}
-              border={"1px solid black"}
+              // border={"1px solid black"}
               alignItems={"center"}
               w="60%"
             >
@@ -1806,7 +2015,9 @@ function Home() {
               <Icon as={StarIcon} />
             </Box>
 
-            <Box w="70%" border={"1px solid black"} mt="2%">
+            <Box w="70%" 
+            // border={"1px solid black"}
+             mt="2%">
               <Text color="#222D39" fontWeight={600}>
                 Sed Ut Perspiciatis Unde Omnis Iste Natus Error Sit Voluptatem
                 Accusantium Doloremque Laudantium, Totam Rem Aperiam, Eaque Ipsa
@@ -1821,8 +2032,6 @@ function Home() {
               </Text>
             </Box>
           </CardBody>
-
-          <CardFooter></CardFooter>
         </Stack>
       </Card>
     </>
