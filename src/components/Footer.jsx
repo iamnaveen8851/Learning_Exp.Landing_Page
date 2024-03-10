@@ -244,7 +244,8 @@ function reducer(state, action) {
 function Footer() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
-  function handleClick() {
+ async function handleClick() {
+ 
     dispatch({
       type: "change-email",
     });
