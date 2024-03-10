@@ -1761,6 +1761,7 @@ function Home() {
       </Center>
       <br />
       <br />
+      {/* Video */}
       <SimpleGrid
         w="90%"
         m="auto"
@@ -1775,8 +1776,9 @@ function Home() {
         spacing={10}
       >
         <Box
+        
           borderRadius={"20px"}
-          // border="10px solid #E9D8FD"
+          border="10px solid #E9D8FD"
           position={"relative"}
           // overflow={"hidden"}
         >
