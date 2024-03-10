@@ -79,6 +79,7 @@ function Form() {
       <form action="/action_page.php">
         <label>First Name</label>
         <input
+        
           type="text"
           id="fname"
           name="firstname"

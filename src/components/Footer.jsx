@@ -244,8 +244,7 @@ function reducer(state, action) {
 function Footer() {
   const [state, dispatch] = useReducer(reducer, initialState);
 
- async function handleClick() {
- 
+  async function handleClick() {
     dispatch({
       type: "change-email",
     });
@@ -310,8 +309,9 @@ function Footer() {
               </p>
             </Box>
             <Box height="150px" p={4}>
-              <InputGroup mt="10%" size="md">
+              <InputGroup   mt="10%" size="md"  borderRadius={20}>
                 <Input
+                id="inputBorder"
                   bg={"#FFFFFF"}
                   borderRadius={20}
                   pr="4.5rem"
@@ -326,11 +326,13 @@ function Footer() {
                       transform: "scale(1.1)",
                     }}
                     bg="#FFEC05"
-                    h="1.75rem"
+                    h="1.99rem"
+                    mt="19%"
                     borderRadius={20}
                     mr="8%"
                     size="lg"
                     fontSize="12px"
+                    
                     onClick={handleClick}
                   >
                     {show ? "Sent" : "Send"}
