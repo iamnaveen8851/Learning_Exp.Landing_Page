@@ -1776,21 +1776,23 @@ function Home() {
         spacing={10}
       >
         <Box
-        
+        h="300px"
           borderRadius={"20px"}
           border="10px solid #E9D8FD"
           position={"relative"}
-          // overflow={"hidden"}
+          overflow={"hidden"}
+          
         >
           <Iframe
             // url="https://www.youtube.com/embed/Bm1NtTAtBAA?si=p1dB8jA37gp-aKMb"
             url="https://www.youtube.com/embed/c6UNV7gJt8Y?si=m5l4C4NaY5x_IyeP"
             position="absolute"
+            
             width="100%"
             id="myId"
             className="myClassname"
             height="100%"
-            styles={{ height: "320px" }}
+            styles={{ height: "320px"  }}
           />
         </Box>
 
